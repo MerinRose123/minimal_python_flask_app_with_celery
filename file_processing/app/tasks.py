@@ -1,5 +1,4 @@
 # importing the required modules
-# import celery
 import os
 import shutil
 import time
