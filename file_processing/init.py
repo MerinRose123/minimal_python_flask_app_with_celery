@@ -5,5 +5,9 @@ celery = make_celery(app)
 
 app.app_context().push()
 
+# Importing the api routes. You can also use blueprint for routing in larger applications.
+from app import run
+
 if __name__ == '__main__':
+    # Running the application in the given port
     app.run(host='0.0.0.0', port=5002)
