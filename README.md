@@ -1,5 +1,5 @@
-# Periodic-File-Delete-in-Python-Flask
-The application demonstrates the use of celery with flask.
+# Minimal Flask App with Celery
+This application can be used as a boilerplate for simple flask applications which uses celery.
 
 ### Prerequisites
 * The redis server should be up and running in port 6379.
