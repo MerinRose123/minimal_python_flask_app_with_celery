@@ -1,15 +1,17 @@
 from flask import Flask
 from celery import Celery
+import os
 from celery_config import CeleryConf
 from config import config_by_name
 
+# Declared globally for easy access
 celery = Celery(__name__)
 app = Flask(__name__)
 
 
 def create_app():
-    app.config.from_object(config_by_name['local'])
-
+    # Change environment variable to get into development environment mode
+    app.config.from_object(config_by_name[os.getenv('FLASK_ENVIRONMENT') or 'local'])
     return app
 
 

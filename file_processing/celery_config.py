@@ -10,9 +10,12 @@ class CeleryConf:
     CELERY_TASK_SERIALIZER = 'json'
     CELERY_RESULT_SERIALIZER = 'json'
 
+    # Add celery tasks which should be run in scheduled manner here
     CELERYBEAT_SCHEDULE = {
         'test-celery': {
-            'task': 'delete_temporary_files_periodically',
-            'schedule': timedelta(seconds=30),
+            # the celery task name
+            'task': 'periodic_temporary_file_delete',
+            # Duration in which the task should be repeated. Currently set as 1 min
+            'schedule': timedelta(seconds=60),
         }
     }

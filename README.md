@@ -4,7 +4,7 @@ This application can be used as a boilerplate for simple flask applications whic
 ### Prerequisites
 * The redis server should be up and running in port 6379.
 
-* The application is compatible with python 3.8.5
+* Python should be installed in the system. The application is compatible with python 3.8.5
 
 ### Setting up virtual environment
 
@@ -27,7 +27,7 @@ The requirements for the application can be installed by getting into the folder
 Then type `pip install -r requirements.txt`
 
 ### How To Run the App
-To run the application get into the folder file_processing in terminal. Then type `python init.py`.
+* To run the application get into the folder file_processing in terminal. Then type `python app_init.py`.
 
-To start celery along with beat get into file_processing folder in terminal and type 
-`celery worker -A init.celery --loglevel=INFO -B`
+* To start celery along with beat get into file_processing folder in terminal and type 
+`celery worker -A app_init.celery --loglevel=INFO -B`

@@ -10,4 +10,5 @@ from app import run
 
 if __name__ == '__main__':
     # Running the application in the given port
+    print("Running flask app")
     app.run(host='0.0.0.0', port=5002)

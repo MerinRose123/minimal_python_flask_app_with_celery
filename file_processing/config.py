@@ -3,7 +3,7 @@ from os import environ
 
 class Config:
     DEBUG = False
-    SERVICE_NAME = 'piracy_detection'
+    SERVICE_NAME = 'file_processing'
 
     REDIS_HOST = "0.0.0.0"
     REDIS_PORT = 6379
@@ -17,6 +17,7 @@ class LocalConfig(Config):
 
 
 class DevelopmentConfig(Config):
+    # Development environment
     DEBUG = False
 
 
